@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div id="map" class='map'>
+    <div id="info" class="info" data-html="true"></div>
+    <container class="form-popup" id="formbox">
+        <button type="button" class="btn btn-danger btn-sm" id="closeForm">Close</button>
+        <div class='formsubmit'>
+            <div>
+                <label for="datepick">Date and Time of Visit</label>
+                <input type="text" id="datepick_visit" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="datepick">Date of COVID-19 Diagnosis</label>
+                <input type="text" id="datepick_diagnosis" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Location">
+            </div>
+            <div>
+                <p> Please refrain from submitting invalid information as this information could prove useful to others.</p>
+            </div>
+            <button class="btn btn-primary" id="submitButton">Submit</button>
+        </div>
+    </container>
+    </div>
+
+{% endblock %}

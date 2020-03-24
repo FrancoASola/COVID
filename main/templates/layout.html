@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COVID Anonymous</title>
+    <!-- Load Jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" rel="stylesheet" />
+    <!-- Load Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Load Local Dependencies -->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'libs/v6.2.1-dist/ol.css') }}">
+    <!-- Site -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id = 'navbar'>
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for( 'site.live' )}}"> All <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Date
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div>
+                        <input type="text" id="picker" class="form-control">
+                        <div class="text-center" style="padding:2px;">
+                            <button id='datesubmit' class="btn btn-secondary btn-sm" syle> Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for( 'site.live' )}}"> About <span class="sr-only">(current)</span></a>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log In</button>
+            </form>
+        </div>
+    </nav>
+</head>
+    <body>
+        {% block body %}
+        {% endblock %}      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="{{ url_for('static', filename= 'libs/v6.2.1-dist/ol.js') }}">  </script>
+        <script src="{{ url_for('static', filename= 'javascript/index.js' ) }}"> </script>
+
+    </body>
+</html>
