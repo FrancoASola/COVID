@@ -131,7 +131,10 @@ $('#submitButton').on('click', function(){
   $.ajax({
     type: 'POST',
     url: `api/new_location/${coordinates}`,
-    data: {'coordinates': coordinates}
+    data: {'coordinates': coordinates, 
+    'date': $('#datepick_visit').val(), 
+    'diagnosis': $('#datepick_diagnosis').val(), 
+    'location': $("#location").val()}
   });
 });
 
