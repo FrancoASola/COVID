@@ -127,10 +127,9 @@ map.on('dblclick', function(evt){
 
 //Submit Form
 $('#submitButton').on('click', function(){
-  console.log(coordinates)
   $.ajax({
     type: 'POST',
-    url: `api/new_location/${coordinates}`,
+    url: `api/new_location`,
     data: {'coordinates': coordinates, 
     'date': $('#datepick_visit').val(), 
     'diagnosis': $('#datepick_diagnosis').val(), 
